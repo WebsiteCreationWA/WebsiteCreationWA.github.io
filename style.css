@@ -2,11 +2,49 @@
 body, h1, h2, p, ul, li {
     margin: 0;
     padding: 0;
+    font-family: "Bookman Old Style", serif; /* Schriftart hinzufügen */
 }
+
+/* CSS für den Header */
+header {
+    background-color: #007BFF;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    overflow: hidden; /* Text wird horizontal beschnitten, wenn er nicht in die Zeile passt */
+}
+
+/* CSS für die h1-Überschriften im Header */
+header h1 {
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Text wird zentriert */
+    letter-spacing: var(--letter-spacing); /* Verwendung einer CSS-Variable */
+    white-space: nowrap; /* Text wird nicht umgebrochen und bleibt in einer Zeile */
+    overflow: hidden; /* Text, der nicht in die Zeile passt, wird beschnitten */
+}
+
+/* Media Query für größere Bildschirme */
+@media (min-width: 768px) {
+    header h1 {
+        font-size: 24px; /* Anpassung der Schriftgröße für größere Bildschirme */
+        --letter-spacing: 0.1em; /* Anpassung des Buchstabenabstands für größere Bildschirme */
+    }
+}
+
+/* Media Query für noch größere Bildschirme */
+@media (min-width: 1200px) {
+    header h1 {
+        font-size: 36px; /* Anpassung der Schriftgröße für noch größere Bildschirme */
+        --letter-spacing: 0.2em; /* Anpassung des Buchstabenabstands für noch größere Bildschirme */
+    }
+}
+
+
+
 
 /* Allgemeine Stile für die Seite */
 body {
-    font-family: Arial, sans-serif;
     background-color: #f0f0f0;
     color: #333;
     line-height: 1.6;
