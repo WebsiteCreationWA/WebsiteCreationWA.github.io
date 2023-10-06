@@ -26,7 +26,7 @@
 
     bildslideshow
 
-   
+
 
     <section id="leistungen">
         <h2>Unsere Leistungen</h2>
@@ -41,26 +41,48 @@
 
     <section id="über-mich" class="klappbare-sektion">
         <script src="script.js"></script>
-        <h2 class="titel">Über mich</h2>
+        <h2 class="titel" title="klicken für mehr">Über mich</h2>
         <div>
             <h3>AUGENFACHARZT</h3>
             <h3>Assoc. Prof. Priv.-Doz. Dr. Günther Weigert</h2>
-            <h3>Facharzt für Augenheilkunde und Optometrie</h2>
-            <p>BILD</p>
+                <h3>Facharzt für Augenheilkunde und Optometrie</h2>
+                    <p>BILD</p>
         </div>
     </section>
 
-    <section id="kontakt">
-        <h2>Kontakt</h2>
-        <p>Sie erreichen uns wie folgt:</p>
-        <address>
-            <p>Priv. Doz. Dr. Günther Weigert</p>
-            <p>Würzburggasse 45</p>
-            <p>1130 Wien</p>
-        </address>
-        <p>Tel: 06646461385</p>
-        <p>E-Mail: info@dr-weigert.de</p>
+    <style>
+        @media (max-width: 600px) {
+            #kontakt {
+                flex-direction: column;
+            }
+        }
+    </style>
+
+    <section id="kontakt" style="display: flex; flex-wrap: wrap;">
+        <div class="kontakt-information" style="flex: 1; padding-right: 20px;">
+            <h2>Kontakt</h2>
+            <address>
+                <p>Priv. Doz. Dr. Günther Weigert</p>
+                <p>Würzburggasse 45</p>
+                <p>1130 Wien</p>
+                <br>
+                <a title="Hier klicken"
+                    href="https://www.openstreetmap.org/?mlat=48.17475&mlon=16.29331#map=19/48.17475/16.29331"
+                    style="text-decoration: none; color: inherit;" target="_blank">&#187; Adresse Online Anzeigen</a>
+            </address>
+            <a href="tel:+4306646461385" style="text-decoration: none; color: inherit">&#187; Tel: 06646461385</a>
+            <br>
+            <a href="mailto:info@dr-weigert.de" style="text-decoration: none; color: inherit">&#187; E-Mail:
+                info@dr-weigert.de</a>
+        </div>
+        <div class="karte-container"
+            style="flex: 1; position: relative; height: 270px; width: 100%; max-width: 300px; overflow: hidden;">
+            <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=16.292056739330295%2C48.17416910408727%2C16.294567286968235%2C48.17533531062275&layer=mapnik&marker=48.17475221067065%2C16.29331201314926"
+                style="position: absolute; top: 0px; right: 0px; left: 0px; bottom: 0px;"></iframe>
+        </div>
     </section>
+
 
     <footer>
         <p>&copy; 2023 Priv. Doz. Dr. Günther Weigert - Alle Rechte vorbehalten</p>
