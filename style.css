@@ -13,12 +13,14 @@ li {
 
 /* CSS für den Header */
 header {
-    background-color: #94c8ff;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.7); /* Hier können Sie den Alphakanal anpassen (0 = vollständig transparent, 1 = vollständig undurchsichtig) */
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Damit der Header über den darunterliegenden Elementen liegt */
 }
+
 
 /* CSS für die h1-Überschriften im Header */
 header h1 {
@@ -35,13 +37,6 @@ body {
     background-color: #f0f0f0;
     color: #333;
     line-height: 1.6;
-    padding: 20px;
-}
-
-header {
-    background-color: #6db3ff;
-    color: #fff;
-    text-align: center;
     padding: 20px;
 }
 
@@ -102,42 +97,4 @@ p,
 address {
     font-size: 16px;
     margin-bottom: 5px;
-}
-
-
-
-.klappbare-sektion {
-    border: 1px solid #ccc;
-    margin-bottom: 20px;
-    margin-top: 10px;
-    padding: 10px;
-    cursor: pointer;
-    overflow: hidden;
-    max-height: 1000px;
-    /* Ändere die Höhe je nach Bedarf */
-    transition: max-height 0.3s ease-out, background-color 0.3s ease-out;
-    /* Übergangsanimation für max-height und background-color hinzufügen */
-    background-color: #fff;
-    /* Hintergrundfarbe in geschlossenem Zustand */
-}
-
-.klappbare-sektion:hover {
-    background-color: #f0f0f0;
-    /* Hintergrundfarbe ändern, wenn die Sektion gehovered wird */
-}
-
-.klappbare-sektion div {
-    opacity: 0;
-    transition: opacity 0.3s ease-in;
-    display: none;
-}
-
-.klappbare-sektion.geöffnet div {
-    opacity: 1;
-    transition: opacity 0.3s ease-out;
-    display: block;
-}
-
-.titel {
-    margin: 0;
 }
